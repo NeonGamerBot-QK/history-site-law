@@ -28,8 +28,8 @@
 }
 
 .tooltip {
-  color: var(--blue) @apply p-2 duration-500 linear;
+  @apply p-2 duration-500 text-blue-500;
 }
 .tooltip:hover {
-  color: var(--teal);
+  @apply text-blue-300;
 }

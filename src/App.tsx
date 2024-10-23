@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import noTalkTauh from "./assets/talk-tuah.png";
 import { MdEmail } from "react-icons/md";
@@ -27,12 +27,12 @@ function IconBar({ setSlide, slide }: any) {
       animate={{
         opacity: 1,
         //@ts-ignore
-        y: slide > -1 ? defaultPos : 0,
+        y: slide > -1 ? (slide == 0 ? defaultPos - 20 : defaultPos) : 0,
       }}
       transition={{ duration: 1.5 }}
       className={`${
         slide > -1 ? " md:text-5xl text-3xl" : "md: text-6xl text-4xl"
-      } font-bold inline-flex ${slide == 1 ? "mt-5" : ""}`}
+      } font-bold inline-flex ${slide == 1 ? "mt-5" : ""} duration-500 linear`}
     >
       {" "}
       <motion.img
@@ -40,7 +40,7 @@ function IconBar({ setSlide, slide }: any) {
         onClick={() => setSlide(0)}
         className={`mr-5 lg:ml-20 ${
           slide === -1 ? "animate-pulse cursor-pointer" : ""
-        } ${slide > 0 ? "opacity-50" : ""}`}
+        } ${slide > 0 ? "opacity-50" : ""} w-20 h-20`}
         width={50}
         height={50}
         whileHover={{ scale: 1.1 }}
@@ -48,64 +48,121 @@ function IconBar({ setSlide, slide }: any) {
         transition={{ duration: 0.5 }}
       ></motion.img>{" "}
       {/* -{" "} */}
-      <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        animate={slide == 1 ? { x: -350, y: -400 } : {}}
+        transition={{ duration: 0.5 }}
+      >
         <MdEmail
           className={`mr-5 ml-5  ${
             slide === 0 ? "animate-pulse cursor-pointer" : ""
-          }`}
+          } ${slide === 1 ? "text-9xl" : ""}`}
           style={slide > 1 ? { color: "var(--overlay0)" } : {}}
           onClick={() => setSlide(1)}
         />
+        {slide == 1 && (
+          <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/20/Hopper_%28item%29_JE3_BE2.png/revision/latest?cb=20190910052257" />
+        )}
       </motion.div>{" "}
       {/* -{" "} */}
-      <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        animate={slide == 2 ? { x: 550, y: -400 } : {}}
+        transition={{ duration: 0.5 }}
+      >
         <IoFunnelSharp
           style={slide > 2 ? { color: "var(--overlay0)" } : {}}
           onClick={() => setSlide(2)}
           className={`mr-5 ml-5  ${
             slide === 1 ? "animate-pulse cursor-pointer" : ""
-          }`}
+          } ${slide === 2 ? "text-9xl" : ""}`}
         />
+        {slide == 2 && (
+          <img
+            src="https://media.cnn.com/api/v1/images/stellar/prod/231025171028-07-house-speaker-race-102423.jpg?c=original"
+            className="w-1/2 h-1/2"
+          />
+        )}
       </motion.div>{" "}
       {/* -{" "} */}
-      <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        animate={slide == 3 ? { x: -200, y: -400 } : {}}
+        transition={{ duration: 0.5 }}
+      >
         <FaMarker
           style={slide > 3 ? { color: "var(--overlay0)" } : {}}
           onClick={() => setSlide(3)}
           className={`mr-5 ml-5  ${
             slide === 2 ? "animate-pulse cursor-pointer" : ""
-          }`}
+          } ${slide == 3 ? "text-9xl" : ""}`}
         />
+        {slide == 3 && (
+          <img
+            src="https://www.congressionalinstitute.org/wp-content/uploads/2021/02/schumer_mcconnell-1024x683.png"
+            className="w-1/2 h-1/2"
+          />
+        )}
       </motion.div>{" "}
       {/* -{" "} */}
-      <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        animate={slide == 4 ? { x: 350, y: -400 } : {}}
+        transition={{ duration: 0.5 }}
+      >
         <RiFilePaperLine
           style={slide > 4 ? { color: "var(--overlay0)" } : {}}
           onClick={() => setSlide(4)}
           className={`mr-5 ml-5  ${
             slide === 3 ? "animate-pulse cursor-pointer" : ""
-          }`}
+          } } ${slide == 4 ? "text-9xl" : ""}`}
         />
+        {slide == 4 && (
+          <img
+            src="https://media3.giphy.com/media/23D8NR89IoZUC9jgsO/giphy.gif?cid=6c09b952wwjpu17i0m3vgijyy3n5ctljgj5kdatcctw1lof5&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s"
+            className="w-1/2 h-1/2"
+          />
+        )}
       </motion.div>{" "}
       {/* -{" "} */}
-      <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        animate={slide == 5 ? { x: -400, y: -400 } : {}}
+        transition={{ duration: 0.5 }}
+      >
         <GiCongress
           onClick={() => setSlide(5)}
           style={slide > 5 ? { color: "var(--overlay0)" } : {}}
           className={`mr-5 ml-5 ${
             slide === 4 ? "animate-pulse cursor-pointer" : ""
-          }`}
+          } ${slide == 5 ? "text-9xl" : ""}`}
         />
+        {slide == 5 && (
+          <img
+            src="https://compote.slate.com/images/a14da45b-d7a4-4233-bbaa-0e4872c3d12c.jpg?width=1200"
+            className="w-1/2 h-1/2"
+          />
+        )}
       </motion.div>{" "}
       {/* -{" "} */}
-      <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        animate={slide == 6 ? { x: 50, y: -400 } : {}}
+        transition={{ duration: 0.5 }}
+      >
         <GoLaw
           onClick={() => setSlide(6)}
           style={slide > 6 ? { color: "var(--overlay0)" } : {}}
           className={`ml-5  ${
             slide === 5 ? "animate-pulse cursor-pointer" : ""
-          }`}
+          } ${slide == 6 ? "text-9xl" : ""}`}
         />
+        {slide == 6 && (
+          <img
+            src="https://media.istockphoto.com/id/1409304410/photo/dramatic-view-of-the-united-states-capitol-building-in-washington-dc.jpg?s=612x612&w=0&k=20&c=ddWqTW-8V-1DQ06fZQLq5e9vWemWGCYNVfu9G_SA2g8="
+            className="w-1/2 h-1/2"
+          />
+        )}
       </motion.div>
     </motion.h1>
   );
@@ -126,7 +183,6 @@ function App() {
       <div className="hero-content text-center">
         <div className="max-w-xl">
           {/* <img src={noTalkTauh}width={50} height={50} className='mr-5 -ml-5' /> */}
-          <IconBar setSlide={setSlide} slide={slide} />
           <motion.div
             animate={{
               y: -50,
@@ -165,6 +221,7 @@ Default react template
           {/* <button className="btn btn-primary">src/App.tsx</button> */}
         </div>
       </div>
+      <IconBar setSlide={setSlide} slide={slide} />
     </motion.div>
     // </AnimatePresence>
   );
