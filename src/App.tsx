@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import noTalkTauh from "./assets/talk-tuah.png";
+import hopper form "./assets/hopper.png"
 import { MdEmail } from "react-icons/md";
 import { IoFunnelSharp } from "react-icons/io5";
 import { FaMarker } from "react-icons/fa";
@@ -60,9 +61,7 @@ function IconBar({ setSlide, slide }: any) {
           style={slide > 1 ? { color: "var(--overlay0)" } : {}}
           onClick={() => setSlide(1)}
         />
-        {slide == 1 && (
-          <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/20/Hopper_%28item%29_JE3_BE2.png/revision/latest?cb=20190910052257" />
-        )}
+        {slide == 1 && <img src={hopper} />}
       </motion.div>{" "}
       {/* -{" "} */}
       <motion.div
