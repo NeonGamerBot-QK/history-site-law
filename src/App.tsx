@@ -61,7 +61,7 @@ function IconBar({ setSlide, slide }: any) {
           style={slide > 1 ? { color: "var(--overlay0)" } : {}}
           onClick={() => setSlide(1)}
         />
-        {slide == 1 && <img src={hopper} />}
+        {slide == 1 && (<img src={hopper} />)}
       </motion.div>{" "}
       {/* -{" "} */}
       <motion.div
