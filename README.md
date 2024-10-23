@@ -1,5 +1,3 @@
-<!-- still unfinished -->
-## FINISH TEMPLATE ##
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
 <!--
@@ -32,21 +30,21 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/NeonGamerBot-QK/repo_name">
+  <a href="https://github.com/NeonGamerBot-QK/history-site-law">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">History Project: There Ought To Be A Law</h3>
 
   <p align="center">
-    project_description
+ 10th grade history project
     <br />
     <br />
-    <a href="https://github.com/NeonGamerBot-QK/repo_name">View Demo</a>
+    <a href="https://github.com/NeonGamerBot-QK/history-site-law">View Demo</a>
     ·
-    <a href="https://github.com/NeonGamerBot-QK/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/NeonGamerBot-QK/history-site-law/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/NeonGamerBot-QK/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/NeonGamerBot-QK/history-site-law/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -83,9 +81,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://saahild.com/history-law-project-2024)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `NeonGamerBot-QK`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,58 +102,10 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 React app install.
 
-### Installation
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/NeonGamerBot-QK/saahild.com.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/NeonGamerBot-QK/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/NeonGamerBot-QK/history-site-law/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
@@ -164,7 +113,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Saahil - neon@saahild.com
 
-Project Link: [https://github.com/NeonGamerBot-QK/repo_name](https://github.com/NeonGamerBot-QK/repo_name)
+Project Link: [https://github.com/NeonGamerBot-QK/history-site-law](https://github.com/NeonGamerBot-QK/history-site-law)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -183,19 +132,19 @@ Project Link: [https://github.com/NeonGamerBot-QK/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/NeonGamerBot-QK/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/NeonGamerBot-QK/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/NeonGamerBot-QK/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/NeonGamerBot-QK/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/NeonGamerBot-QK/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/NeonGamerBot-QK/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/NeonGamerBot-QK/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/NeonGamerBot-QK/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/NeonGamerBot-QK/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/NeonGamerBot-QK/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/NeonGamerBot-QK/history-site-law.svg?style=for-the-badge
+[contributors-url]: https://github.com/NeonGamerBot-QK/history-site-law/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/NeonGamerBot-QK/history-site-law.svg?style=for-the-badge
+[forks-url]: https://github.com/NeonGamerBot-QK/history-site-law/network/members
+[stars-shield]: https://img.shields.io/github/stars/NeonGamerBot-QK/history-site-law.svg?style=for-the-badge
+[stars-url]: https://github.com/NeonGamerBot-QK/history-site-law/stargazers
+[issues-shield]: https://img.shields.io/github/issues/NeonGamerBot-QK/history-site-law.svg?style=for-the-badge
+[issues-url]: https://github.com/NeonGamerBot-QK/history-site-law/issues
+[license-shield]: https://img.shields.io/github/license/NeonGamerBot-QK/history-site-law.svg?style=for-the-badge
+[license-url]: https://github.com/NeonGamerBot-QK/history-site-law/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: ./screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
