@@ -9,7 +9,7 @@ export const text = [
     </span>{" "}
     and the bill signed for not being allowed to watch talk tauh in delaware on
     sundays.
-    <img src={noTalkTauh} />
+    {/* <img src={noTalkTauh} /> */}
   </p>,
   <p>
     After that it would go to a hopper and continue on for a{" "}
