@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import noTalkTauh from "./assets/talk-tuah.png";
 import { MdEmail } from "react-icons/md";
@@ -14,23 +14,31 @@ const variants: Variants = {
   exit: { opacity: 0 },
 };
 function IconBar({ setSlide, slide }: any) {
+  const ref = useRef(null);
+  const [defaultPos, setDP] = React.useState(-1);
+  if (defaultPos < 0 && slide > -1) {
+    //@ts-expect-error
+    setDP(ref.current?.offsetTop);
+  }
   return (
     <motion.h1
+      ref={ref}
       initial={{ opacity: 0.7, x: -50 }}
       animate={{
         opacity: 1,
-        y: slide > -1 ? window.screen.height - 600 : 0,
+        //@ts-ignore
+        y: slide > -1 ? defaultPos : 0,
       }}
       transition={{ duration: 1.5 }}
       className={`${
-        slide > -1 ? "text-5xl" : "text-6xl"
-      } font-bold inline-flex`}
+        slide > -1 ? " md:text-5xl text-3xl" : "md: text-6xl text-4xl"
+      } font-bold inline-flex ${slide == 1 ? "mt-5" : ""}`}
     >
       {" "}
       <motion.img
         src={noTalkTauh}
         onClick={() => setSlide(0)}
-        className={`mr-5 -ml-5 ${
+        className={`mr-5 lg:ml-20 ${
           slide === -1 ? "animate-pulse cursor-pointer" : ""
         } ${slide > 0 ? "opacity-50" : ""}`}
         width={50}
@@ -39,62 +47,62 @@ function IconBar({ setSlide, slide }: any) {
         whileFocus={{ scale: 1.1 }}
         transition={{ duration: 0.5 }}
       ></motion.img>{" "}
-      -{" "}
+      {/* -{" "} */}
       <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
         <MdEmail
-          className={`mr-5 ml-5 5 ${
+          className={`mr-5 ml-5  ${
             slide === 0 ? "animate-pulse cursor-pointer" : ""
           }`}
           style={slide > 1 ? { color: "var(--overlay0)" } : {}}
           onClick={() => setSlide(1)}
         />
       </motion.div>{" "}
-      -{" "}
+      {/* -{" "} */}
       <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
         <IoFunnelSharp
           style={slide > 2 ? { color: "var(--overlay0)" } : {}}
           onClick={() => setSlide(2)}
-          className={`mr-5 ml-5 5 ${
+          className={`mr-5 ml-5  ${
             slide === 1 ? "animate-pulse cursor-pointer" : ""
           }`}
         />
       </motion.div>{" "}
-      -{" "}
+      {/* -{" "} */}
       <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
         <FaMarker
           style={slide > 3 ? { color: "var(--overlay0)" } : {}}
           onClick={() => setSlide(3)}
-          className={`mr-5 ml-5 5 ${
+          className={`mr-5 ml-5  ${
             slide === 2 ? "animate-pulse cursor-pointer" : ""
           }`}
         />
       </motion.div>{" "}
-      -{" "}
+      {/* -{" "} */}
       <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
         <RiFilePaperLine
           style={slide > 4 ? { color: "var(--overlay0)" } : {}}
           onClick={() => setSlide(4)}
-          className={`mr-5 ml-5 5 ${
+          className={`mr-5 ml-5  ${
             slide === 3 ? "animate-pulse cursor-pointer" : ""
           }`}
         />
       </motion.div>{" "}
-      -{" "}
+      {/* -{" "} */}
       <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
         <GiCongress
           onClick={() => setSlide(5)}
           style={slide > 5 ? { color: "var(--overlay0)" } : {}}
-          className={`mr-5 ml-5 5 ${
+          className={`mr-5 ml-5 ${
             slide === 4 ? "animate-pulse cursor-pointer" : ""
           }`}
         />
       </motion.div>{" "}
-      -{" "}
+      {/* -{" "} */}
       <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
         <GoLaw
           onClick={() => setSlide(6)}
           style={slide > 6 ? { color: "var(--overlay0)" } : {}}
-          className={`mr-5 ml-5 5 ${
+          className={`ml-5  ${
             slide === 5 ? "animate-pulse cursor-pointer" : ""
           }`}
         />
@@ -122,7 +130,7 @@ function App() {
           <motion.div
             animate={{
               y: -50,
-              x: slide % 2 == 0 ? -370 : 370,
+              x: slide % 2 == 0 ? -330 : 330,
               opacity: 1,
             }}
             transition={{ duration: 1.5, delay: 0.5 }}
@@ -137,7 +145,7 @@ function App() {
                 <motion.div>
                   {/* <motion.h1 className="font-bold text-3xl">Title</motion.h1> */}
                   <p
-                    className="text-xl"
+                    className="md:text-xl text-sm"
                     // variants={variants}
                     // initial="initial"
                     // animate="animate"
